@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- post_detail.html -->
+<h1 class="text-center text-warning "  >{{ car.title }}</h1>
+<h3 class="text-center text-light " style=" padding-left: 60px; padding-right: 60px; margin-bottom: 30px ">{{ car.year }}</h3>
+
+<div id="image-carousel" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+        {% for image in car.image_set.all %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <center>
+                  <img src="{{ image.image.url }}" class="d-block w-20" alt="Image">
+                </center>
+            </div>
+        {% endfor %}
+    </div>
+    <a class="carousel-control-prev" href="#image-carousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#image-carousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+<!-- Include necessary Bootstrap CSS and JS files for the carousel -->
+
+{% endblock content %}

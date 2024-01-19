@@ -1,0 +1,166 @@
+{% load static %}
+
+<html>
+  <head>
+    <title>Django blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400"
+    rel="stylesheet">
+    <link href="{% static 'css/base.css' %}" rel="stylesheet">
+    <!-- Include Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!-- Include Bootstrap JS and Popper.js -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+ </head>
+  <body class="bg-dark">
+    <div>
+      <header>
+        <div class="nav-left">
+          <h1><a href="{% url 'home' %}"class="text-warning"font size="5" color="red" face="Arial">SutochnoKLD</a></h1>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+          <a class="navbar-brand" href="#">Главная</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav mr-auto">
+              
+              <li class="nav-item active">
+                <a class="nav-link" href="url vigoda.html" class="text-primary">Выгодная покупка</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="" class="text-primary">О нас</a>
+              </li>
+              
+             
+
+
+             
+              
+            </ul>
+            <form class="form-inline">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" wfd-id="id5">
+              <button class="btn btn-outline-info my-2 my-sm-0" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+
+      </header>
+      <style>
+        /* base.css */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #2d2d2d;
+    color: #fff;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+header {
+    background-color: #1d1d1d;
+    color: #61dafb;
+    padding: 1em;
+    text-align: center;
+}
+
+h1 a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.navbar {
+    background-color: #1d1d1d;
+}
+
+.navbar-brand {
+    color: #61dafb;
+}
+
+.navbar-toggler-icon {
+    background-color: #61dafb;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #fff;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+    color: #61dafb;
+}
+
+.nav-right a {
+    color: #61dafb;
+    text-decoration: none;
+}
+
+.content-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #2d2d2d;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    color: #fff; /* Новый цвет текста для контраста */
+}
+
+footer {
+    background-color: #1d1d1d;
+    color: #61dafb;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Additional Styles for Better Appearance */
+.content-container {
+    margin-top: 20px;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-item .nav-link {
+    padding: 10px 15px;
+}
+
+.btn-outline-light {
+    border-color: #61dafb;
+    color: #61dafb;
+}
+
+.btn-outline-light:hover {
+    background-color: #61dafb;
+    color: #2d2d2d;
+}
+
+.text-primary {
+    color: #61dafb;
+}
+
+.text-light {
+    color: #fff;
+}
+
+.text-dark {
+    color: #2d2d2d;
+}
+      </style>
+    {% block content %}
+    {% endblock content %}
+    </div>
+  </body>
+</html>
